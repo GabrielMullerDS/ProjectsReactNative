@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     fontSize: 32,
     marginBottom: 45,
     color: '#ffe84f',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
   txtInput: {
     marginTop: 5,
