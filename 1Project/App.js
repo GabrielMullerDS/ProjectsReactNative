@@ -1,23 +1,33 @@
+import {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity, Alert} from 'react-native';
 
 export default function App() {
+
+  const [celsius, setCelsius] = useState(0);
+  let fahrenheint;
+
+  function calculateTemperature() {
+    fahrenheint = (9 * celsius + 160)/5
+    Alert.alert('Conversor', `${celsius}°c equivalem a ${fahrenheint}°f`)
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}> - Aplicativo Temperatura - </Text>
       <TextInput
         style={styles.txtInput} 
-        placeholder='Informe a temperarura em Celcius'
+        placeholder='Informe a temperarura em Celsius'
+        placeholderTextColor='#fff'
         keyboardType='numeric'
+        onChangeText={(celsius) => setCelsius(celsius)}
       />
-      <TouchableOpacity onPress={teste}>
+      <TouchableOpacity onPress={calculateTemperature}>
       <Text style={styles.btnCalc}>Calcular</Text>
       </TouchableOpacity>
     </View>
   );
 }
-function teste() {
-  Alert.alert('Testado')
-}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
