@@ -8,7 +8,7 @@ export default function App() {
 
   function converter() {
     if (km <= 0){
-      Alert.alert('Impossível Converter ;-;', 'Por favor digite um número maior que 0 (zero)')
+      Alert.alert('Impossível Converter ;-;', 'Por favor digite um número maior que 0 (zero) para a sua disância')
     }
     else{
     m = (km * 1000);
