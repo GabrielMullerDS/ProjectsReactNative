@@ -8,8 +8,16 @@ export default function App() {
   let conv;
 
   function converter() {
+    if(dolar<=0){
+      Alert.alert('Wow 😲', 'O Dolar está a 0 (zero) rais?')
+    }
+    else if(reais<=0){
+      Alert.alert('Éééééé...', 'Eu entendo amigo, támbem estousem um tustão no bolso 😥')
+    }
+    else{
     conv = (reais/dolar)
     Alert.alert('Convertido ^^', `Seus R$${reais} seriam convertidos para $${conv.toFixed(2)}`)
+    }
   }
   return (
     <View style={styles.container}>
