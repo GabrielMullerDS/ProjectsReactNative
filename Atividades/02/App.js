@@ -7,8 +7,13 @@ export default function App() {
   let Mph;
 
   function converter() {
-    Mph = KMpH / 1.609
-    Alert.alert('Convertido ^^', `A velocidade de ${KMpH}Km/h é igual a ${Mph.toFixed(3)}Mph`);
+    if(KMpH > 0){
+      Mph = KMpH / 1.609
+      Alert.alert('Convertido ^^', `A velocidade de ${KMpH}Km/h é igual a ${Mph.toFixed(3)}Mph`);
+    }
+    else{
+      Alert.alert('Convertido 😴🥱', 'Você não está andando o_O');
+    }
   }
 
   function Duvida() {
