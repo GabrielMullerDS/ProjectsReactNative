@@ -7,13 +7,8 @@ export default function App() {
   let m;
 
   function converter() {
-    if (km <= 0){
-      Alert.alert('Impossível Converter ;-;', 'Por favor digite um número maior que 0 (zero) para a sua disância')
-    }
-    else{
-    m = (km * 1000);
-    Alert.alert('Convertido ^^', `A distância de ${km}km é igual a ${m}m`);
-    }
+   m = (km * 1000);
+   Alert.alert('Convertido ^^', `A distância de ${km}km é igual a ${m}m`);
   }
   
   return (
